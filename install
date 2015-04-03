@@ -1,5 +1,15 @@
+#如何快速正确的安装 Ruby, Rails 运行环境
+# 最有效
+https://ruby-china.org/wiki/install_ruby_guide
+
+
+
+
+
+
 #install ruby
 https://www.digitalocean.com/community/tutorials/how-to-install-ruby-2-1-0-on-centos-6-5-using-rvm
 
 # install rails
 gem install rails
+
