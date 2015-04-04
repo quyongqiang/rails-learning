@@ -27,10 +27,19 @@ rails generate model Comment commenter:string body:text article:references
 #
 rails generate controller Comments
 
+#
+rake db:create --trace
+
 
 rails destory controller ....
 
 
 # static pages
 rails generate controller pages home about
+
+#
+grant all privileges on spblog_test.* to 'sbadmin'@'localhost' identified by 'password';
+
+#
+
 
