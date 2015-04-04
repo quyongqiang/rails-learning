@@ -1,0 +1,9 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: sbadmin
+  password: password
+  host: localhost
+  socket: /data/mysql-1/data/mysql.sock
+
