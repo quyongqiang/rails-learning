@@ -1,3 +1,8 @@
+# Ruby on Rails Tutorial
+# by Derek Banas 
+
+
+
 # create project
 rails new spblog -d mysql
 
@@ -24,3 +29,8 @@ rails generate controller Comments
 
 
 rails destory controller ....
+
+
+# static pages
+rails generate controller pages home about
+
