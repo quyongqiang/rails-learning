@@ -1,1 +1,11 @@
+# create project
 rails new spblog -d mysql
+
+# database config
+
+# create database
+create database spblog_development;
+
+# create db user
+grant all privileges on spblog_development.* to 'sbadmin'@'localhost' identified by 'password';
+
