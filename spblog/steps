@@ -9,3 +9,18 @@ create database spblog_development;
 # create db user
 grant all privileges on spblog_development.* to 'sbadmin'@'localhost' identified by 'password';
 
+#
+rails generate scaffold User password:string email:string
+rake db:migrate
+
+#
+rails generate scaffold Article title:string post:text user_id:integer
+
+# 
+rails generate model Comment commenter:string body:text article:references
+
+#
+rails generate controller Comments
+
+
+rails destory controller ....
