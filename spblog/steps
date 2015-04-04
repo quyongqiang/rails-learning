@@ -42,4 +42,3 @@ grant all privileges on spblog_test.* to 'sbadmin'@'localhost' identified by 'pa
 
 #
 
-
