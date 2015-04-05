@@ -38,7 +38,10 @@ rails destory controller ....
 rails generate controller pages home about
 
 #
-grant all privileges on spblog_test.* to 'sbadmin'@'localhost' identified by 'password';
+rake db:create --trace
 
 #
+grant all privileges on spblog_test.* to 'sbadmin'@'localhost' identified by 'password';
+
+
 
