@@ -1,0 +1,19 @@
+# create project
+rails new myproject
+rails g controller welcome homepage
+vim config/routes
+http://192.168.0.12:3004/
+
+# get some template
+startbootstrap.com 
+download one template
+
+# assets prepare
+put the images,css,js into assets dir.
+put the index.html content to homepage.html.erb
+
+# modify home.html.erb
+# chg: img => assets
+  %s/src=\"img/src=\"assets/g
+
+#
