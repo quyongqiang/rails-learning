@@ -16,4 +16,5 @@ put the index.html content to homepage.html.erb
 # chg: img => assets
   %s/src=\"img/src=\"assets/g
 
-#
+# rails using font awesome
+http://stackoverflow.com/questions/11052398/rails-using-font-awesome
