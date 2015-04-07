@@ -1,0 +1,6 @@
+1.ExecJS and could not find a JavaScript runtime
+  http://stackoverflow.com/questions/6282307/execjs-and-could-not-find-a-javascript-runtime
+# add to Gemfile
+gem 'execjs'
+gem 'therubyracer'
+# run bundle install
