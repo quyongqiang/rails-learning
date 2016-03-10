@@ -10,3 +10,6 @@ rake db:fixtures:load
 
 # 开启thin server
 rails s thin
+
+# 在项目根目录下执行 rails c ,打开rails console
+rails c
