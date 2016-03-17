@@ -1,0 +1,16 @@
+
+#####################################
+bash# rake
+You have requested:
+  rake ~> 10.5.0
+
+The bundle currently has rake locked at 10.1.0.
+Try running `bundle update rake`
+
+If you are updating multiple gems in your Gemfile at once,
+try passing them all to `bundle update`
+Run `bundle install` to install missing gems.
+
+
+####################################
+
