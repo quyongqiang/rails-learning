@@ -1,6 +1,7 @@
 # 启动服务器
 rails server
-
+rails s
+rails s -p 4000 -b 0.0.0.0
 
 # 查看路由表
 rake routes
