@@ -1,5 +1,4 @@
-# example,  给users表 添加 email 列
-
+# example, add an "email" columu to "users" table.
 ＃1. 
 rails g migration add_email_to_users
 
@@ -13,3 +12,6 @@ end
 
 # 3. exec the migrate
 rake db:migrate
+
+# 4. load the fixtures' data
+rake db:fixtures:load
