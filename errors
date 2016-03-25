@@ -4,3 +4,6 @@
 gem 'execjs'
 gem 'therubyracer'
 # run bundle install
+
+# 
+当发现报错时，相信自已一定什么地方写错了，认真检查关键字，语法，end等等，使用全局搜索。
