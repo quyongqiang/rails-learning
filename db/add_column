@@ -1,0 +1,15 @@
+# example,  给users表 添加 email 列
+
+＃1. 
+rails g migration add_email_to_users
+
+# 2. change the migrate file
+class AddEmailToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :email, :string, :null => false, :default => ""
+  end
+end
+
+
+# 3. exec the migrate
+rake db:migrate
