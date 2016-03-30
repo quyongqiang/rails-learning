@@ -14,3 +14,6 @@ rails s thin
 
 # 在项目根目录下执行 rails c ,打开rails console
 rails c
+
+# load test data
+rake db:fixtures:load
