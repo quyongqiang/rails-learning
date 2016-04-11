@@ -1,0 +1,16 @@
+Ruby
+  - Object-oriented
+  - Easily readable
+  - Unsurprising syntax and behavior
+
+DRY code
+  - Don't repeat yourself
+  - Concise, consistent code that is easy to maintain
+  - Built DRY, encourages DRY
+
+Convention over configuration
+  - Sensible defaults, only specify unconventional aspects
+  - Speeds development, less code to maintain
+  - Follows best practices(opinionated!)
+  - Extra features for free
+
