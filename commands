@@ -20,3 +20,7 @@ rake db:fixtures:load
 
 # in irb
 irb > Post.first.method(:someotherrandommethod).source_location
+irb > Post.method(:somerandommethod).source_location
+
+# routes all
+rake routes
