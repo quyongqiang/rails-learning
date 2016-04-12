@@ -17,3 +17,6 @@ rails c
 
 # load test data
 rake db:fixtures:load
+
+# in irb
+irb > Post.first.method(:someotherrandommethod).source_location
