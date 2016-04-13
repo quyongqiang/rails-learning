@@ -1,0 +1,8 @@
+# error
+Can't find the PostgreSQL client library (libpq)
+
+# solve
+# http://stackoverflow.com/questions/6209797/cant-find-the-postgresql-client-library-libpq
+$ sudo su
+
+$ env ARCHFLAGS="-arch x86_64" gem install pg
