@@ -37,3 +37,4 @@ bundle exec rake db:migrate
 # 
 rails g 回车，会看到帮助
 rails g controller 回车 会看到g controller的具体帮助
+rails g controller  controller1 view1 view2 view3 ...
