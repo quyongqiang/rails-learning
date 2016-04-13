@@ -24,3 +24,9 @@ irb > Post.method(:somerandommethod).source_location
 
 # routes all
 rake routes
+
+#
+rake db:migrate
+bundle exec rake db:migrate
+
+
