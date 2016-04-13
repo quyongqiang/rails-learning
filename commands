@@ -1,3 +1,8 @@
+# new project
+rails new blog
+rails new simple_cms -d postgresql
+
+
 # 启动服务器
 rails server
 rails s
