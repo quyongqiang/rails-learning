@@ -1,0 +1,17 @@
+# Simple route
+get 'demo/index'
+
+# following route is not correct ?
+match => "demo/index", :to => "demo#index", via => :get
+
+ 
+# Default route structure
+:controller/:action/:id
+match ':controller(/:action(/:id))', :via => :get
+match ':controller(/:action(/:id(.:format)))', :via => :get
+
+
+
+# Root route
+root :to => "demo#index"
+root "demo#index"
