@@ -3,3 +3,10 @@
 # link targets
 "/demo/index"
 {:controller => 'demo', :action => 'index'}
+
+
+# the following two line, get the same result.
+
+<a href="/demo/hello">hello page 1</a>
+<br>
+<%= link_to('hello page 2', {:action => 'hello'}) %>
