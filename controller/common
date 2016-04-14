@@ -1,6 +1,6 @@
-保持良好习惯
-即使没有相应操作，只返回模版内容，也在controller中加入一个空方法，像下面的index, hello.
+保持良好习惯,即使没有相应操作，只返回模版内容，也在controller中加入一个空方法，像下面的index, hello.
 
+controller中的实例变量可以被模版读取，局部变量不可以。
 
 
 class DemoController < ApplicationController
