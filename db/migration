@@ -1,3 +1,6 @@
+
+# Create migration
+下面两种写法效果相同
 [yq@bogon simple_cms]$rails g migration DoNothingYet
       invoke  active_record
       create    db/migrate/20160415025516_do_nothing_yet.rb
@@ -7,4 +10,7 @@
    identical    db/migrate/20160415025516_do_nothing_yet.rb
    
 
-两种写法效果相同
+# Run migration
+rake db:migrate 
+RAILS_ENV=development
+ 
