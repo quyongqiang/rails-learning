@@ -1,0 +1,28 @@
+
+/demo/hello/1?page=3&name=kevin
+{
+  :controller => 'demo',
+  :action => 'hello',
+  :id => 1,
+  :page => 3,
+  :name => 'kevin'
+}
+
+
+rocessing by DemoController#hello as HTML
+  Parameters: {"page"=>"3", "name"=>"kevin", "id"=>"1"}
+  
+  
+params[:id]
+params['id']
+
+
+id: <%= @id %> <br/>
+id: <%= params[:id] %><br/>
+
+page: <%= @page %><br/>
+next page: <%= @page + 1 %><br/>
+
+# 返回所有参数
+<hr>
+<%= params.inspect %>
