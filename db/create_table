@@ -1,0 +1,24 @@
+
+Create table format
+
+create_table "table" do |t|
+  t.column "name", :type, options
+  t.type "name", options
+end
+
+
+Table Column types
+
+binary    boolean
+integer float  decimal   
+string  text
+date   time    datetime
+   
+
+Table column options
+:limit     => size
+:default   => value
+:null      => true/false
+
+:precision    =>number
+:scale        =>number
