@@ -1,0 +1,5 @@
+Comment out executed code lines to get back on track
+  Write SQL commands as a last resorg
+
+Keep migrations small and concise
+Test all migrations thoroughly in development
