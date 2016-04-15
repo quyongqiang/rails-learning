@@ -1,0 +1,10 @@
+[yq@bogon simple_cms]$rails g migration DoNothingYet
+      invoke  active_record
+      create    db/migrate/20160415025516_do_nothing_yet.rb
+
+[yq@bogon simple_cms]$rails g migration do_nothing_yet
+      invoke  active_record
+   identical    db/migrate/20160415025516_do_nothing_yet.rb
+   
+
+两种写法效果相同
