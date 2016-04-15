@@ -41,7 +41,8 @@ rake db:migrate:up VERSION=20160415025516
 rake db:migrate:down VERSION=20160415025516
 rake db:migrate:redo VERSION=20160415025516
 
-
+可以之单独执行／回滚某一迁移。
+rails会自动判断数据库中schema_migrations表，如果版本号没有在里面，代表该迁移还没有被应用。
 
 
 
