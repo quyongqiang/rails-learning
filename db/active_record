@@ -1,0 +1,10 @@
+ActiveRecord example
+
+user = User.new
+user.first_name = "Kevin"
+user.save # SQL INSERT
+
+user.last_name = "Skoglund"
+user.save # SQL UPDATE
+
+user.delete  # SQL DELETE
