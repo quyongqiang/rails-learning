@@ -14,4 +14,23 @@
 rake db:migrate 
 RAILS_ENV=development
  
+# 回滚所有迁移
 rake db:migrate VERSION=0
+
+
+# 运行部分迁移
+[yq@bogon simple_cms]$rake db:migrate:status
+
+database: simple_cms_development
+
+ Status   Migration ID    Migration Name
+--------------------------------------------------
+  down    20160415025516  Do nothing yet
+  down    20160415030130  Create users
+
+[yq@bogon simple_cms]$rake db:migrate VERSION=20160415025516
+== 20160415025516 DoNothingYet: migrating =====================================
+== 20160415025516 DoNothingYet: migrated (0.0000s) ============================
+
+
+
