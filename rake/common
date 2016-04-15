@@ -1,0 +1,10 @@
+Command line program
+Written in Ruby
+Runs scripts known as "tasks"
+Similar to Unix's make program
+"rake" = "ruby make"
+
+
+# tasks
+rake -T
+
