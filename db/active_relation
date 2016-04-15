@@ -1,0 +1,11 @@
+# ActiveRelation example
+
+users = User.where(:first_name => "Kevin")
+users = users.order("last_name ASC").limit(5)
+users = users.include(:articles_authored)
+
+select users.*, articles.*
+from users
+left join articles on (users.id = articles.author_id)
+where users.first_name = 'Kevin'
+order by last_name ASC limit 5
