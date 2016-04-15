@@ -45,4 +45,35 @@ rake db:migrate:redo VERSION=20160415025516
 rails会自动判断数据库中schema_migrations表，如果版本号没有在里面，代表该迁移还没有被应用。
 
 
+# Table migration methods
+create_table(table, options) do |t|
+   ...columns...
+end
+
+drop_table(table)
+rename_table(table, new_name)
+
+
+# Column migration methods
+add_column(table, column, type, options)
+remove_column(table, column)
+rename_column(table, column, new_name)
+change_column(table, column, type, options)
+
+
+# Index migration methods
+add_index(table, column, options)
+remove_index(table, column)
+
+# Index migration methods options
+:unique => true/false
+:name => "your_custom_name"
+
+# Execute migration method
+execute("any SQL string")
+
+
+
+
+
 
