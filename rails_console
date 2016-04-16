@@ -1,3 +1,6 @@
 rails c
+rails console production
+
 
 subject1 = Subject.new
+
