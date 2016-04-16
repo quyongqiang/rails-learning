@@ -62,6 +62,59 @@ Subject.where(visible: true).order("position ASC")
 "name = 'First Subject' and visible = true"
 Flexible, raw SQL
 Use carefully and beware of SQL injection
+"name = '#{subject_name}' AND visible = true"
+subject_name = "' -- hacker code -- '"
+
+## Array
+["name = ? and visible = true", "First Subject"]
+Flexible, escaped SQL, safe from SQL injection
+## Hash
+{:name => "First Subject", :visible => true}
+Simple, escaped SQL, safe from SQL injection
+Each key-value pair is joined with AND
+Only supports equality, range, and subset checking
+No OR, LIKE, less than, or greater than
+
+Subject.where(:visible => true)
+Subject.where("visible = true")  # not safe for SQL injection
+Subject.where(["visible" = ?", true])
+
+Subject.where(:visible => true).where(:position => 1)
+# equals to
+Subject.where(:visible => true, :position => 1)
+
+Subject.where(id: 1)      # returns array
+Subject.where(id: 1).first  # return object
+
+# Query Methods: Order, Limit, Offset
+order(sql_fragment)
+limit(integer)
+offset(integer)
+
+## example
+Subject.order("position ASC").limit(20).offset(20)
+## Order SQL Format
+table_name.column_name ASC/DESC
+
+# Order SQL Table Disambiguation
+Not necessary for single table
+Recommended with joined tables
+Required when joined tables have same column names
+  order("subjects.created_at ASC")
+  order("subjects.visible DESC, subjects.name ASC")
+  
+Subject.where(:visible => true).order("position ASC")
+Subject.where(:visible => true).order("position DESC")
+Subject.where(:visible => true).order("position DESC").limit(1)
+Subject.where(:visible => true).order("position DESC").limit(1).offset(1)
+
+# Named Scopes
+Queries defined in a model
+Defined using ActiveRelation query methods
+Can be called like ActiveRelation methods
+
+
+
 
 
 
