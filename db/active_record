@@ -8,3 +8,64 @@ user.last_name = "Skoglund"
 user.save # SQL UPDATE
 
 user.delete  # SQL DELETE
+
+# Creating Records
+## way 1: new and save , save returns true or false 
+subject = Subject.new
+subject.new_record?
+subject = Subject.new(name:"First Subject", position: 1, visible: true)
+subject.save
+
+## way 2: create returns the object
+subject = Subject.create(name:"First Subject", position: 1, visible: true)
+
+
+# Updating Records
+## way 1
+subject = Subject.find(1)
+subject.name = "Initial Subject"
+subject.save
+
+## way 2
+subject2 = Subject.find(2)
+subject2.update_attributes(name: "Next Subject", visible: true)  # returns true of false
+
+
+# Deleting Records
+Subject.create(name: "Bad subject")
+subject = Subject.find(3)
+subject.destroy
+
+
+# Finding Records
+## Primary key finder
+Subject.find(2)   #   returns an object of an error
+## Dynamic finders   
+Subject.find_by_id(2)  # returns an object or nil
+Subject.find_by_name("First Subject")
+## Find all method
+Subject.all  # returns an array of objects
+## First/last method
+Subject.first 
+Subject.last 
+Subject.second 
+
+# Query Methods: Conditions
+## where(conditions)
+Subject.where(visible: true)
+## returns an ActiveRelation object, which can be chained
+Subject.where(visible: true).order("position ASC")
+## Does not execute a database call immediately
+
+# Condition expression types
+## String
+"name = 'First Subject' and visible = true"
+Flexible, raw SQL
+Use carefully and beware of SQL injection
+
+
+
+
+
+
+
