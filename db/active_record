@@ -112,10 +112,37 @@ Subject.where(:visible => true).order("position DESC").limit(1).offset(1)
 Queries defined in a model
 Defined using ActiveRelation query methods
 Can be called like ActiveRelation methods
+Can accept parameters
+Rails 4 requires lambda syntax
 
+## example1 :
+scope :active, lambda {where(:active => true)}
+scope :active, -> {where(:active => true)}
+def self.active
+  where(:active => true)
+end
 
+Customer.active
 
+## example 2:
+scope :with_content_type, lambda {|ctype| 
+  where(:content_type => ctype)
+}
 
+def self.with_content_type(ctype)
+    where(:content_type => ctype)
+end
+
+Section.with_content_type('html')
+
+## example 3:
+## Evaluated when called, not when defined
+scope :recent, lambda {
+  where(:created_at => 1.week.ago..Time.now)
+}
+
+## ex 4: Chaining scopes
+Article.recent.visible.newest_first
 
 
 
