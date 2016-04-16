@@ -4,3 +4,5 @@ rails console production
 
 subject1 = Subject.new
 
+
+修改了数据库相关文件，model,migrations, 要重启console才能生效。
