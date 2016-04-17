@@ -1,5 +1,30 @@
 # Relationship Types
+Subject - Page
 
-One-to-one
-One-to-many
+
+## One-to-one
+Subject has_one :page
+Page belongs_to :subject
+
+
+## One-to-many
+Subject has_many :pages
+Page belongs_to :subject
+
+### has_many methods
+subject.pages
+subject.pages << page
+subject.pages = [page, page, page]
+subject.pages.delete(page)
+subject.pages.destory(page)
+subject.pages.clear
+subject.pages.empty?
+subject.pages.size
+
+subject.pages.where(visible: true)
+subject.pages.size
+subject.pages.count
+Page.all.size
+##
 Many-to-many
+
