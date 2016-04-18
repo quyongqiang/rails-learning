@@ -61,6 +61,7 @@ AdminUser - Section
   edit =  SectionEdit.create(summary: "Test edit 2")
   me = AdminUser.find(1)
   me.section_edits << edit
+  # edit.editor(admin_user) = me
   section.section_edits << edit
   edit.save
   
