@@ -45,7 +45,11 @@ schema:
 console:
 page = Page.find(2)
 me = AdminUser.create(first_name: "Kevin", last_name: "Skoglund", username: "Kskoglund")
+# << 会增加一行在数据库中，多次执行会多次增加，而使用=则会删除原来的相关纪录并增加，着点有疑问。
 page.editors << me
+me.pages << page
+#  以上两句效果相同，都会在数据库中增加一行
+
 me.pages
    SELECT `pages`.* FROM `pages` INNER JOIN `admin_users_pages` ON `pages`.`id` = `admin_users_pages`.`page_id` 
    WHERE `admin_users_pages`.`admin_user_id` = 1
