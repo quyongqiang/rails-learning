@@ -47,4 +47,6 @@ page = Page.find(2)
 me = AdminUser.create(first_name: "Kevin", last_name: "Skoglund", username: "Kskoglund")
 page.editors << me
 me.pages
+   SELECT `pages`.* FROM `pages` INNER JOIN `admin_users_pages` ON `pages`.`id` = `admin_users_pages`.`page_id` 
+   WHERE `admin_users_pages`.`admin_user_id` = 1
 
