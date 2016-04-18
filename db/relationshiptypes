@@ -25,6 +25,26 @@ subject.pages.where(visible: true)
 subject.pages.size
 subject.pages.count
 Page.all.size
-##
-Many-to-many
+
+
+##Many-to-many
+
+model:
+admin_user  has_and_belongs_to_many :pages
+page   has_and_belongs_to_many :editors, :class_name => "AdminUser"
+
+schema:
+  add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree
+
+  create_table "admin_users_pages", id: false, force: :cascade do |t|
+    t.integer "admin_user_id", limit: 4
+    t.integer "page_id",       limit: 4
+  end
+
+
+console:
+page = Page.find(2)
+me = AdminUser.create(first_name: "Kevin", last_name: "Skoglund", username: "Kskoglund")
+page.editors << me
+me.pages
 
