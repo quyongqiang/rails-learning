@@ -27,7 +27,7 @@ subject.pages.count
 Page.all.size
 
 
-##Many-to-many
+##Many-to-many Associations: Simple
 
 model:
 AdminUser  has_and_belongs_to_many :pages
