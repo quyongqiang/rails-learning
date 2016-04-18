@@ -58,5 +58,10 @@ AdminUser - Section
   Section has_many :section_edits
   Section_Edit belongs_to :section
   
+  edit =  SectionEdit.create(summary: "Test edit 2")
+  me = AdminUser.find(1)
+  me.section_edits << edit
+  section.section_edits << edit
+  edit.save
   
   
