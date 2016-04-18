@@ -30,8 +30,8 @@ Page.all.size
 ##Many-to-many
 
 model:
-admin_user  has_and_belongs_to_many :pages
-page   has_and_belongs_to_many :editors, :class_name => "AdminUser"
+AdminUser  has_and_belongs_to_many :pages
+Page   has_and_belongs_to_many :editors, :class_name => "AdminUser"
 
 schema:
   add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree
@@ -50,3 +50,13 @@ me.pages
    SELECT `pages`.* FROM `pages` INNER JOIN `admin_users_pages` ON `pages`.`id` = `admin_users_pages`.`page_id` 
    WHERE `admin_users_pages`.`admin_user_id` = 1
 
+
+## Many-to-many Associations: Rich
+AdminUser - Section
+  AdminUser has_many :section_edits
+  Section_Edit belongs_to :admin_user
+  Section has_many :section_edits
+  Section_Edit belongs_to :section
+  
+  
+  
