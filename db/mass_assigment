@@ -3,3 +3,10 @@ Rails term for passing a hash of values to an object to be assigned as attribute
 - Subject.new(params[:subject])
 - Subject.create(params[:subject])
 - @subject.update_attributes(params[:subject])
+
+# Strong Parameters
+params.permit(:first_name, :last_name)
+params.require(:subject)
+  # returns :subject hash, similart to params[:subject]
+
+params.require(:subject).permit(:name, :position, :visible)
