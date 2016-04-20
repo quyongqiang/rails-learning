@@ -1,0 +1,5 @@
+Rails term for passing a hash of values to an object to be assigned as attributes.
+
+- Subject.new(params[:subject])
+- Subject.create(params[:subject])
+- @subject.update_attributes(params[:subject])
