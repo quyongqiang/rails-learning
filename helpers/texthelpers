@@ -1,7 +1,7 @@
-word_wrap
+word_wrap 自动换行
 simple_format
-truncate
+truncate 截断
 excerpt
 highlight
-pluralize
+pluralize 复数
 cycle
