@@ -1,0 +1,11 @@
+rails c
+s = Subject.new
+s.errors
+
+# this will exec the validition processes in model file
+s.valid?
+
+s.errors
+s.errors.full_messages
+
+
