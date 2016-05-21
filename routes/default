@@ -1,0 +1,2 @@
+# super route 超级通配路由
+match ':controller(/:action(/:id(.:format)))', :via => [:get, :post]
