@@ -1,0 +1,3 @@
+# what's the difference between the following two?
+<%= link_to("back to main menu", {:controller => 'access', :action =>'index'}, :class => 'back-link') %>
+<%= link_to("back to main menu", :controller => 'access', :action =>'index', :class => 'back-link') %> 
