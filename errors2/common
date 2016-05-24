@@ -7,3 +7,10 @@ gem 'therubyracer'
 
 # 
 当发现报错时，相信自已一定什么地方写错了，认真检查关键字，语法，end等等，使用全局搜索。
+
+
+2. # syntax error, unexpected ')', expecting keyword_end
+错误信息显示是，(不匹配
+我们来看一下代码
+redirect_to (:action => 'index', :subject_id => @subject.id)
+这里redirect_to和'('之间有一个空格，删除空格就好了
