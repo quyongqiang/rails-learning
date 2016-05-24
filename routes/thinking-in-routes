@@ -1,0 +1,4 @@
+路由不能混用，否则冲突
+要么   match ':controller(/:action(/:id(.:format)))', :via => [:get, :post]
+  
+要么 用标准写法 #resources :subjects  
