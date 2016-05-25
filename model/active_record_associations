@@ -1,3 +1,10 @@
 直接关系: has_one, has_many, belongs_to
 间接关系: has_many :editors, :through => :section_edits, :class_name => "AdminUser" 
 
+
+# 如果关系如下：
+subject has_many :pages
+page belongs_to :subject
+则可以执行的方法有：
+page.subject
+subject.pages
