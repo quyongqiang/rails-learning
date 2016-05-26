@@ -1,0 +1,2 @@
+# in erb file,  '#' sign after '<%' is comment.
+<%#= link_to("Back to page", {:controller =>'pages' , :action => 'index', :subject_id => @subject.id}, :class => 'back link') %>
