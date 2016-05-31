@@ -41,3 +41,9 @@ rails g controller  controller1 view1 view2 view3 ...
 
 # export schema
 rake db:schema:dump
+
+# clear log
+rake log:clear
+
+# inspect
+object.inspect
