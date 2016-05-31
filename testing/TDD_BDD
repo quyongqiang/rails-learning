@@ -1,0 +1,11 @@
+TDD
+   Test Driven Development
+
+BDD
+  Behavior Driven Development
+
+
+Write tests expressing the desired result  
+the write code until all tests pass. 
+
+guides.rubyonrails.org/testing
