@@ -1,0 +1,11 @@
+Test::Unit
+Webrat
+Rspec
+Mocha
+Selenium
+Shoulda
+Watir
+Rcov
+Cucumber
+autotest
+ 
