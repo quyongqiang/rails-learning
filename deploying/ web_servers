@@ -1,0 +1,11 @@
+Full-featured
+- Apache
+- Nginx
+- Lighttpd
+
+Light-weight
+- Passenger/mod_rails
+- Unicorn
+- Mongrel
+- Thin
+
