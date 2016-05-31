@@ -1,0 +1,7 @@
+unit testing              models
+functional testing        controllers/views, requests
+integration testing       user stories, sequences of requests
+performance testing       how fast are requests handled
+load testing              how many requests can be handled
+security testing          security vulnerabilities
+
