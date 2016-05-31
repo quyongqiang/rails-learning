@@ -1,0 +1,10 @@
+cut step
+use console
+object.inspect
+
+<%= debug(object) %>
+
+puts to server console
+
+# gem
+ruby-debug 
