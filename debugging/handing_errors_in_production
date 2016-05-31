@@ -1,0 +1,13 @@
+config/environments/production.rb
+  config.consider_all_requests_local = false
+  
+do not show errors in the browser
+
+show error pages instead
+
+
+# error page should all static html file, have no dynamic things
+
+# gem 
+exception_notification
+ 
