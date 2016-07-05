@@ -1,0 +1,4 @@
+rails g controller about index
+rails g controller books new create index show update edit destroy
+rails g controller categories new create index show update edit destroy
+
