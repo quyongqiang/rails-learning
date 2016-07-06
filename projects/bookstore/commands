@@ -2,3 +2,17 @@ rails g controller about index
 rails g controller books new create index show update edit destroy
 rails g controller categories new create index show update edit destroy
 
+
+
+# model
+rails g model books title:string category_id:integer author_id:integer publisher_id:integer isbn:string year:string price:string buy:string excerpt:text format:string pages:integer
+rails g model author first_name:string last_name:string
+rails g model category name:string
+rails g model publisher name:string
+rake db:migrate
+
+
+
+# migration
+rails g migration add_coverpath_to_books coverpath:string
+rake db:migrate
