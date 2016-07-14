@@ -1,0 +1,21 @@
+直接在数据库配置文件中修改adapter为postgresql
+development:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: bookstore_development
+  # username: bookstore
+  # password: bookstore
+
+gem 中新增pg
+bundle install
+
+
+bin/createdb bookstore_development
+
+
+# 执行数据迁移，也就是在数据库中生成数据表，以及生成ruby的schema文件。
+
+pg不设置密码也可以连接
+
+
