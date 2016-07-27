@@ -1,0 +1,55 @@
+http://stackoverflow.com/questions/17450672/how-to-start-puma-with-unix-socket
+
+
+To start puma with socket binding just use /tmp directory:
+
+bundle exec puma -e development -b unix:///tmp/my_app.sock
+To access application through domain name you should use something like nginx and do configuration for it.
+
+To install nginx in Ubuntu just run next command:
+
+sudo apt-get install nginx
+Run sudo nano /etc/nginx/sites-available/my_app.conf and place configuration below into this file (Ctrl + X, Y - to save changes):
+
+upstream my_app {
+  server              unix:///tmp/my_app.sock;
+}
+
+server {
+  listen              *:80;
+  server_name         my_app.com;
+
+  access_log          /var/log/nginx/my_app-access.log;
+
+  location /favicon.ico {
+    root              /var/www/my_app/public/assets/favicon.ico;
+    gzip_static       on;
+    expires           max;
+    add_header        Cache-Control public;
+  }
+
+  location / {
+    root              /var/www/my_app/public;
+    try_files         $uri @app;
+    gzip_static       on;
+    expires           max;
+    add_header        Cache-Control public;
+  }
+
+  location @app {
+    proxy_pass        http://my_app;
+    proxy_set_header  X-Real-IP  $remote_addr;
+    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header  X-Forwarded-Proto http;
+    proxy_set_header  Host $http_host;
+    proxy_redirect    off;
+    proxy_next_upstream error timeout invalid_header http_502;
+  }   
+}
+You should change /var/www/my_app and my_app.com to appropriate values.
+
+Add symlink into enabled sites sudo ln -fns /etc/nginx/sites-available/my_app.conf /etc/nginx/sites-enabled/
+
+Restart nginx: sudo service nginx restart.
+
+Link your domain name to server IP (via hosts-file or DNS-provider).
