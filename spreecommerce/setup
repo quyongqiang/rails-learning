@@ -1,0 +1,4 @@
+bin/createuser spreeshop -s
+rails new spreeshop -d postgresql
+
+rake db:create
