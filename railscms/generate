@@ -1,0 +1,14 @@
+rails g controller home show
+rails g controller pages show
+
+rails g model section  name:string
+rails g model page title:string section_id:integer body:text order:integer is_published:boolean menu_display:boolean
+rails g model block title:string body:text position:string display:string show_title:boolean class_suffix:string  is_published:boolean
+
+rake db:migrate
+
+
+
+bundle install
+
+
