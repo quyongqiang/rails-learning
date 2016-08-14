@@ -9,9 +9,5 @@ rails new railscms --no-ri --no-doc
  flush privileges;
 
 
-# first use rails 5 with mysql, but rails 5 has version confilct, finally I use rails 4.2.6 with postgresql,
 
-   rails (~> 5.0.0) was resolved to 5.0.0.1, which depends on
-         sprockets-rails (>= 2.0.0) was resolved to 3.1.1, which depends on
-           actionpack (>= 4.0)
 
