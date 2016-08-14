@@ -8,6 +8,21 @@ rails g model block title:string body:text position:string display:string show_t
 rake db:migrate
 
 
+# gemfile
+
+# added
+
+gem 'activeadmin', github: 'activeadmin'
+# rails 5
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+gem 'devise'
+gem 'active_admin_editor'
+gem 'font-awesome-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
+
 
 bundle install
 
