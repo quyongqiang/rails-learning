@@ -25,5 +25,6 @@ gem 'autoprefixer-rails'
 
 
 bundle install
-
+rails g active_admin:install
+rake db:migrate
 
