@@ -1,0 +1,9 @@
+rails new railscms --no-ri --no-doc
+
+
+# RailsCMS mysql  setup
+ create database railscms_development;
+ create database railscms_test;
+ grant all on railscms_development.* to 'railscms'@'localhost' identified by 'railscms';
+ grant all on railscms_test.* to 'railscms'@'localhost' identified by 'railscms';
+ flush privileges;
