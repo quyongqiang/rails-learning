@@ -4,3 +4,10 @@ rails g devise:views
 # 
 rails g devise User
 rake db:migrate
+
+
+get /users/sing_up
+get /users/sing_in
+
+
+rails g migration add_user_id_to_sites user_id:integer
