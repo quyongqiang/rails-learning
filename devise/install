@@ -1,1 +1,6 @@
 rails g devise:install
+rails g devise:views
+
+# 
+rails g devise User
+rake db:migrate
