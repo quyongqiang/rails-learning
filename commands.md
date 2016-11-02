@@ -47,3 +47,6 @@ rake log:clear
 
 # inspect
 object.inspect
+
+# gem install
+gem install --no-rdoc --no-ri rspec ci_reporter_rspec
