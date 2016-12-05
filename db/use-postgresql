@@ -1,0 +1,5 @@
+## 如果使用pgsql， 
+gem 'pg', '~> 0.18'
+gem install pg
+
+yum install postgresql-devel
