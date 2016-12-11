@@ -1,0 +1,7 @@
+# 使用windows作为开发系统
+核心：在Windows中编辑和访问，利用vagrant的挂载功能将liunx的目录共享到Windows中运行
+虽然rails/ruby也支持windows，但是不建议直接在Windows下直接运行
+
+
+# 使用mac作为操作系统
+大部分开发者使用mac作为rails开发环境
